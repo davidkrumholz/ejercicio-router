@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import { useEffect } from "react";
 import ProductItem from "../../Components/ProductItem";
+import productsApi from "../../lib/productsApi";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const getAllProducts = async () => {
-            const response = await fetch("https://fakestoreapi.com/products");
-            const data = await response.json();
+            const data = await productsApi.getAllProducts();
             setProducts(data);
         }
         getAllProducts();

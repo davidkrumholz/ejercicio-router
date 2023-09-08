@@ -17,6 +17,7 @@ import {
 import {Routes, Route, Link} from "react-router-dom";
 import Products from "./Pages/Products";
 import Users from "./Pages/Users";
+import ProductDetail from "./Pages/Products/Detail";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Routes>
             <Route path="/users" element={<Users/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/products/detail/:productId" element={<ProductDetail/>}></Route>
           </Routes>
         </div>
       </div>
